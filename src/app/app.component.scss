@@ -1,0 +1,26 @@
+.app-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main {
+  height: 100%;
+  display: flex;
+}
+.content {
+  flex: auto;
+  /*order: -1;*/
+}
+
+@media screen and (max-width: 500px) {
+
+  .main {
+      flex-direction: column;
+  }
+
+}
+
+tl-header{
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
