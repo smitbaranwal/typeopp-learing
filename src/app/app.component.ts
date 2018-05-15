@@ -52,6 +52,8 @@ export class AppComponent implements OnInit, OnDestroy {
     {link: 'howto', label: 'How to', icon: 'message', subNavigation: [], subnavDisplay: false},
     {link: 'faq', label: 'FAQ', icon: 'help_outline', subNavigation: [], subnavDisplay: false},
     {link: 'profiles', label: 'Profile page', icon: 'person_outline', subNavigation: [], subnavDisplay: false},
+    {link: 'subscription/budget', label: 'Subscription Budget', icon: '', subNavigation: [], subnavDisplay: false},
+    {link: 'users/maria', label: 'Maria Andreas', icon: '', subNavigation: [], subnavDisplay: false},
     {link: 'subscriptions', label: 'Subscriptions', icon: 'subscriptions', subNavigation: [{
       link: 'subscriptions/purchase-training', label: 'Purchase Training', icon: 'supervisor_account'
     },

@@ -4,8 +4,8 @@
           User List
         </div>
         <div class="col-md-6">
-            <button type="button" class="btn btn-outline-primary pull-right"><i class="fa fa-pencil"></i> Edit</button>
-            <button type="button" class="btn btn-outline-primary pull-right"><i class="fa fa-times-circle"></i> New</button>
+            <button type="button" class="btn btn-outline-primary pull-right tl-butn"><i class="fa fa-pencil"></i> Edit</button>
+            <button type="button" class="btn btn-outline-primary pull-right tl-butn mar-rgt5"><i class="fa fa-times-circle"></i> New</button>
         </div>
     </div>
 
@@ -33,7 +33,7 @@
                 </thead>
                 <tbody>
                   <tr  *ngFor="let content of returnedArray">
-                    <td>{{content.userName}}</td>
+                    <td><a [routerLink]="'users/'+[content.userName]">{{content.userName}}</a></td>
                     <td>{{content.noOfTrainings}}</td>
                     <td> <span [ngClass]="{'red-dot': content.status=='waiting', 'yellow-dot': content.status=='in progress', 'green-dot': content.status=='passed'}"></span> {{content.status}}</td>
                   </tr>

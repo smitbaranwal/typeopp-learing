@@ -38,6 +38,8 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { InvoiceListComponent } from './invoice-list/invoice-list.component';
 import { SubscriptionTypeComponent } from './subscription-type/subscription-type.component';
 import { UserListComponent } from '@app/user-list/user-list.component';
+import { SubscriptionBudgetComponent } from './subscription-budget/subscription-budget.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 
@@ -89,7 +91,9 @@ import { UserListComponent } from '@app/user-list/user-list.component';
     CertificatesComponent,
     InvoiceListComponent,
     SubscriptionTypeComponent,
-    UserListComponent],
+    UserListComponent,
+    SubscriptionBudgetComponent,
+    UserDetailsComponent],
   providers: [
       MessageResoureService,
       UtilService,

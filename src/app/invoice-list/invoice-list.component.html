@@ -1,3 +1,40 @@
-<p>
-  invoice-list works!
-</p>
+<div class="account-row">
+    <div class="row  col-md-12">
+        <div class="col-md-6">
+          Invoices List
+        </div>
+        
+    </div>
+
+      <div class="row search-bar">
+        <div class="col-xs-12 col-12">
+            <pagination [totalItems]="contentArray.length" (pageChanged)="pageChanged($event)"></pagination>
+          <!-- <div class="content-wrapper"> -->
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Invoice Number</th>
+                    <th>Invoice Date</th>
+                    <th>Invoice Total</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr  *ngFor="let content of returnedArray">
+                    <td>{{content.invoiceNo}}</td>
+                    <td>{{content.invoiceDate}}</td>
+                    <td>{{content.invoiceAmount}}</td>
+                    <td>{{content.dueDate}}</td>
+                    <td> <span [ngClass]="{'red-dot': content.status=='draft', 'yellow-dot': content.status=='sent', 'green-dot': content.status=='paid'}"></span> {{content.status}}</td>
+                    <td><button type="button" class="btn btn-outline-primary tl-butn"><i class="fa fa-arrow-down"></i> Download</button></td>
+                  </tr>
+                </tbody>
+              </table>
+          <!-- </div> -->
+        </div>
+
+      </div>
+
+  </div>

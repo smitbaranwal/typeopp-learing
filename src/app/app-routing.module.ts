@@ -12,6 +12,8 @@ import { ProfilePageComponent } from '@app/profile-page/profile-page.component';
 import { CertificatesComponent } from '@app/certificates/certificates.component';
 import { SubscriptionTypeComponent } from '@app/subscription-type/subscription-type.component';
 import { UserListComponent } from '@app/user-list/user-list.component';
+import { SubscriptionBudgetComponent } from '@app/subscription-budget/subscription-budget.component';
+import { UserDetailsComponent } from '@app/user-details/user-details.component';
 
 const routes: Routes = [
   {
@@ -83,6 +85,20 @@ const routes: Routes = [
     component: UserListComponent,
     data: {
       title: 'User List'
+    } ,
+  },
+  {
+    path: 'users/:userId',
+    component: UserDetailsComponent,
+    data: {
+      title: 'User Details'
+    } ,
+  },
+  {
+    path: 'subscription/budget',
+    component: SubscriptionBudgetComponent,
+    data: {
+      title: 'Subscription Budget'
     } ,
   },
   {
